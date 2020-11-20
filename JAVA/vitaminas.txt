@@ -1,0 +1,78 @@
+package vitaminas;
+import java.util.Scanner;
+
+public class Vitaminas {
+
+    public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        /*DECLARACION VARIABLES*/
+        
+        double Peso, Altura, Dosis;
+        byte Sexo;
+        
+        /*ENTRADA DE DATOS*/
+        
+        System.out.print("Ingrese el peso del estudiante en Libras: ");
+        Peso = entrada.nextDouble();
+        System.out.println("");
+        
+        System.out.print("Ingrese la altura en metros: ");
+        Altura = entrada.nextDouble();
+        System.out.println("");
+        
+        /*ENTRADA DE SEXO Y VALIDACION*/
+        
+        Sexo = 3;
+        
+        while (Sexo != 1 && Sexo != 2){
+            
+            System.out.println("Seleccione una opcion");
+            System.out.println("");
+            System.out.println("1. Hombre            2. Mujer");
+            System.out.println("");
+            System.out.print("OPCION: ");
+            Sexo = entrada.nextByte();
+            
+            if (Sexo != 1 && Sexo != 2){
+                
+                System.out.println("");
+                System.out.println("||||DATO INVALIDO||||");
+                System.out.println("");
+            }
+        }
+        
+        System.out.println("");
+        
+        /*||||||HOMBRES||||||*/
+        
+        if (Sexo == 1){
+            
+            if (Altura > 1.60 && Peso >= 150){
+                
+                Dosis = (Altura * 0.2) + (Peso * 0.8);
+                System.out.println("La dosis de vitaminas que debe consumir es de "+Dosis+" gramos.");
+            }else{
+                
+                Dosis = (Altura * 0.3) + (Peso * 0.7);
+                System.out.println("La dosis de vitaminas que debe consumir es de "+Dosis+" gramos.");
+            }
+        }
+        
+        /*||||||MUJERES||||||*/
+        
+        if (Sexo == 2){
+            
+            if (Altura > 1.50 && Peso >= 130){
+                
+                Dosis = (Altura * 0.25) + (Peso * 0.75);
+                System.out.println("La dosis de vitaminas que debe consumir es de "+Dosis+" gramos.");
+            }else{
+                
+                Dosis = (Altura * 0.35) + (Peso * 0.65);
+                System.out.println("La dosis de vitaminas que debe consumir es de "+Dosis+" gramos.");
+            }
+        }
+    }   
+}

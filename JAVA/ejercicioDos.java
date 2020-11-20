@@ -1,40 +1,27 @@
-/* Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
-Es posible que el codigo generado no sea completamente correcto. Si encuentra
-errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 
-// En java, el nombre de un archivo fuente debe coincidir con el nombre de la clase que contiene,
-// por lo que este archivo deber�a llamarse "EJERCICIODOS.java."
-
-import java.io.*;
+import javax.swing.*;
 
 public class ejercicioDos {
 
-	public static void main(String args[]) throws IOException {
-		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String args[]){
 		int descuento;
-		double subtotal;
-		double total;
-		System.out.println("Indique el costo de su compra");
-		subtotal = Double.parseDouble(bufEntrada.readLine());
+		double subtotal, total;
+		subtotal = Double.parseDouble(JOptionPane.showInputDialog("Indique el costo de su compra"));
 		do {
-			System.out.println("Ingrese el color de su esfera de descuento");
-			System.out.println("1) Azul");
-			System.out.println("2) Rojo");
-			System.out.println("3) Blanco");
-			descuento = Integer.parseInt(bufEntrada.readLine());
+			descuento = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el color de su esfera de descuento\n 1) Azul\n 2) Rojo\n 3) Blanco"));
 		} while (!((descuento==1) || (descuento==2) || (descuento==3)));
 		switch (descuento) {
 		case 1:
 			total = (subtotal-(subtotal*0.2));
-			System.out.println("Usted ha escogido la esfera azul. Tiene un 20% de descuento y el monto a pagar es ".concat(Double.toString(total)));
+			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera azul. Tiene un 20% de descuento y el monto a pagar es "+total);
 			break;
 		case 2:
 			total = (subtotal-(subtotal*0.3));
-			System.out.println("Usted ha escogido la esfera roja. Tiene un 30% de descuento y el monto a pagar es ".concat(Double.toString(total)));
+			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera roja. Tiene un 30% de descuento y el monto a pagar es "+total);
 			break;
 		default:
 			total = subtotal;
-			System.out.println("Usted ha escogido la esfera blanca. El monto a pagar es ".concat(Double.toString(total)));
+			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera blanca. El monto a pagar es "+total);
 		}
 	}
 
