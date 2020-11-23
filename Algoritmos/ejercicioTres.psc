@@ -16,12 +16,12 @@ Algoritmo ejercicioTres
 	Segun descuento  Hacer
 		1:
 			total <- (subTotal-(subTotal*0.15))
-			Escribir Concatenar('Usted ha escogido la esfera azul. Tiene un 20% de descuento y el monto a pagar es ',ConvertirATexto(total))
+			Escribir Concatenar('Su descuento es de 15% y el monto a pagar es ',ConvertirATexto(total))
 		2:
-			total <- (subTotal-(subTotal*0.12))
-			Escribir Concatenar('Usted ha escogido la esfera roja. Tiene un 30% de descuento y el monto a pagar es ',ConvertirATexto(total))
+			total <- (subTotal-(subTotal*0.05))
+			Escribir Concatenar('Su descuento es de 5% y el monto a pagar es '',ConvertirATexto(total))
 		De Otro Modo:
-			total <- (subTotal-(subTotal*0.12))
-			Escribir Concatenar('Usted ha escogido la esfera blanca. El monto a pagar es ',ConvertirATexto(total))
+			total <- (subTotal-(subTotal*0.02))
+			Escribir Concatenar('Su descuento es de 2% y el monto a pagar es '',ConvertirATexto(total))
 	FinSegun
 FinAlgoritmo
