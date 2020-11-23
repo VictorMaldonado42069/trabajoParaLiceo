@@ -15,15 +15,15 @@ public class ejercicioTres {
 		switch (descuento) {
 		case 1:
 			total = (subtotal-(subtotal*0.15));
-			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera azul. Tiene un 20% de descuento y el monto a pagar es "+total);
+			JOptionPane.showMessageDialog(null, "Su descuento es de 15% y el monto a pagar es "+total);
 			break;
 		case 2:
-			total = (subtotal-(subtotal*0.12));
-			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera roja. Tiene un 30% de descuento y el monto a pagar es "+total);
+			total = (subtotal-(subtotal*0.05));
+			JOptionPane.showMessageDialog(null, "Su descuento es de 5% y el monto a pagar es "+total);
 			break;
 		default:
-			total = (subtotal-(subtotal*0.12));
-			JOptionPane.showMessageDialog(null, "Usted ha escogido la esfera blanca. El monto a pagar es "+total);
+			total = (subtotal-(subtotal*0.02));
+			JOptionPane.showMessageDialog(null, "Su descuento es de 2% y el monto a pagar es "+total);
 		}
 	}
 
