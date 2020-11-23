@@ -19,9 +19,9 @@ Algoritmo ejercicioTres
 			Escribir Concatenar('Su descuento es de 15% y el monto a pagar es ',ConvertirATexto(total))
 		2:
 			total <- (subTotal-(subTotal*0.05))
-			Escribir Concatenar('Su descuento es de 5% y el monto a pagar es '',ConvertirATexto(total))
+			Escribir Concatenar('Su descuento es de 5% y el monto a pagar es ',ConvertirATexto(total))
 		De Otro Modo:
 			total <- (subTotal-(subTotal*0.02))
-			Escribir Concatenar('Su descuento es de 2% y el monto a pagar es '',ConvertirATexto(total))
+			Escribir Concatenar('Su descuento es de 2% y el monto a pagar es ',ConvertirATexto(total))
 	FinSegun
 FinAlgoritmo
